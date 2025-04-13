@@ -6,7 +6,7 @@ var assets;
 
 async function loadData() {
         // データ読み込み
-    var url_rets = "https://quanzoo.github.io/PortfolioOptimizer/data/returns.csv";
+    var url_rets = "https://quanzoo.github.io/CovidCrashSimulator/data/returns.csv";
     rets = await loadCSV(url_rets)
     assets = rets[0].slice(1)
 
@@ -202,9 +202,9 @@ function Simulation(){
     wgt[i] = parseFloat(document.querySelector("input#wgt_" + assets[i]).value)/100;
   }
 
-  var initialDateStr = "2007/6/29"
+  var initialDateStr = "2020/1/31"
   startDateStr = getNextDate(rets, initialDateStr)
-  var endDateStr = "2009/2/27"
+  var endDateStr = "2020/3/31"
 
   console.log(rets)
 
